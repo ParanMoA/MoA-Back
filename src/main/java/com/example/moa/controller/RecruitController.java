@@ -49,7 +49,7 @@ public class RecruitController{
         return ResponseEntity.ok().body(RecruitCreateResponseDto.from(updateRecruit));
     }
 
-    @PostMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public ResponseEntity<?> deleteRecruit(HttpServletRequest httpServletRequest, @PathVariable Long id){
         recruitService.delete(id);
         return ResponseEntity.ok()

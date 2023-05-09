@@ -99,8 +99,6 @@ public class RecruitParticipateServiceImpl implements RecruitParticipateService{
         User user= userRepository.findByEmail(email)
                 .orElseThrow(() -> new UserNoIngredientException("No have ingredient"));
 
-        System.out.println("user : "+ user.getIngredients().size());
-
         for(Ingredient i : user.getIngredients()){
             System.out.println(i.getName());
         }
